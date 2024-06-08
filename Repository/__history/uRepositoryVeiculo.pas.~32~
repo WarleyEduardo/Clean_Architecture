@@ -1,0 +1,122 @@
+unit uRepositoryVeiculo;
+
+interface
+
+uses uVeiculo, uDtoVeiculo, uIRepositoryVeiculo, system.Generics.Collections,
+system.SysUtils, uConfiguracaoDb, uUtils;
+
+type
+
+ TRepositoryVeiculo = class(TinterfacedObject, IRepositoryVeiculo)
+  private
+    FLista: TObjectlist<TVeiculo>;
+    ConfiguracaoDb : TConfiguracaoDB;
+    procedure SetLista(const Value: TObjectlist<TVeiculo>);
+  published
+
+   procedure Cadastrar(veiculo : TVeiculo);
+  procedure Alterar(veiculo : Tveiculo);
+  procedure Excluir(codigo : integer);
+  Function Consultar(dto: DtoVeiculo) :TObjectlist<TVeiculo>;
+
+
+   property Lista : TObjectlist<TVeiculo> read FLista write SetLista;
+
+   constructor create;
+  destructor destroy;override;
+
+ end;
+
+implementation
+
+{ TRepositoryVeiculo }
+
+procedure TRepositoryVeiculo.Alterar(veiculo: Tveiculo);
+var
+ sql : string;
+begin
+
+   sql:= 'update veiculos set ' +
+          'nome = '   + QuotedStr(veiculo.Nome) + ','+
+          'placa = '  + Quotedstr(veiculo.Placa) + ',' +
+          'valor = '  + stringReplace(currTostr(veiculo.valor),',','.',[]) + ',' +
+          'status = ' + QuotedStr(ConverterStatusStr(veiculo.status)) +
+          ' where id = ' + intToStr(veiculo.Id) ;
+
+    Configuracaodb.ExecSql(sql);
+
+end;
+
+procedure TRepositoryVeiculo.Cadastrar(veiculo: TVeiculo);
+var
+ sql : string;
+begin
+
+   Sql := 'insert into veiculos (nome,placa,valor,status,' +
+          'values (' +
+          QuotedStr(veiculo.Nome) + ',' +
+          QuotedStr(veiculo.placa) + ',' +
+          stringReplace(currTostr(veiculo.valor),',','.',[]) + ',' +
+          QuotedStr(ConverterStatusStr(veiculo.status))+ ')' ;
+
+   Configuracaodb.ExecSql(sql);
+
+end;
+
+function TRepositoryVeiculo.Consultar(dto: DtoVeiculo): TObjectlist<TVeiculo>;
+var
+ sql : string;
+begin
+
+  sql := 'select * from veiculos where 1 = 1 ' ;
+
+   if dto.id >  0 then
+   begin
+
+     sql := sql + ' and id =  ' + inttoStr(dto.id);
+   end else
+   begin
+
+     if trim(dto.Nome) <> '' then
+     begin
+       sql := sql + ' and nome like ' + Quotedstr('%' + dto.Nome + '%');
+     end;
+
+     if trim(dto.Placa) <> '' then
+     begin
+       sql := sql + ' and placa = ' + QuotedStr(dto.Placa);
+     end;
+
+   end;
+
+end;
+
+constructor TRepositoryVeiculo.create;
+begin
+  Lista := TObjectlist<Tveiculo>.create;
+  Configuracaodb := TconfiguracaoDb.Create;
+end;
+
+destructor TRepositoryVeiculo.destroy;
+begin
+
+  Lista.Free;
+  ConfiguracaoDb.Free;
+
+  inherited;
+end;
+
+procedure TRepositoryVeiculo.Excluir(codigo: integer);
+var
+ sql : string;
+begin
+  sql := 'delete from veiculos where id = ' +  intToStr(codigo);
+   Configuracaodb.ExecSql(sql);
+end;
+
+procedure TRepositoryVeiculo.SetLista(const Value: TObjectlist<TVeiculo>);
+begin
+  FLista := Value;
+end;
+
+end.

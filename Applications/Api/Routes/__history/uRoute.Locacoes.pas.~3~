@@ -1,0 +1,36 @@
+unit uRoute.Locacoes;
+
+interface
+
+uses horse , uController.locacoes;
+
+procedure RouteLocacao;
+begin
+end;
+
+implementation
+
+procedure RouteLocacao;
+begin
+
+
+ // cadastrar
+
+  Thorse.Post('/api/locacao',postlocacao);
+
+ // alterar
+
+
+
+ // excluir
+
+
+
+ // consultar
+
+
+
+end;
+
+
+end.

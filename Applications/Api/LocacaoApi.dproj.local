@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/06/01 11:58:34.000.133,C:\Curso\Applications\Api\LocacaoApi.dproj=C:\Users\notep\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/06/01 21:19:28.000.994,=C:\Curso\Applications\Api\Unit1.pas</Transaction>
+    <Transaction>2024/06/01 21:19:44.000.381,C:\Curso\Applications\Api\Unit1.pas=C:\Curso\Applications\Api\uServer.pas</Transaction>
+    <Transaction>2024/06/01 23:04:51.000.850,=C:\Curso\Applications\Api\Unit1.pas</Transaction>
+    <Transaction>2024/06/01 23:05:25.000.072,C:\Curso\Applications\Api\Unit1.pas=C:\Curso\Applications\Api\Controllers\uController.Clientes.pas</Transaction>
+    <Transaction>2024/06/01 23:07:40.000.348,=C:\Curso\Controllers\uControllerCliente.pas</Transaction>
+    <Transaction>2024/06/01 23:08:10.000.266,=C:\Curso\Core\DTO\uDTOCliente.pas</Transaction>
+    <Transaction>2024/06/01 23:08:22.000.668,=C:\Curso\Core\DTO\uDTOLocacao.pas</Transaction>
+    <Transaction>2024/06/01 23:08:33.000.063,=C:\Curso\Core\DTO\uDTOVeiculo.pas</Transaction>
+    <Transaction>2024/06/01 23:08:54.000.536,=C:\Curso\Core\Enums\uEnums.pas</Transaction>
+    <Transaction>2024/06/01 23:09:10.000.797,=C:\Curso\Core\Exceptions\uExceptions.pas</Transaction>
+    <Transaction>2024/06/01 23:09:25.000.444,=C:\Curso\Core\Models\uCliente.pas</Transaction>
+    <Transaction>2024/06/01 23:09:25.000.473,=C:\Curso\Core\Models\uLocacao.pas</Transaction>
+    <Transaction>2024/06/01 23:09:25.000.503,=C:\Curso\Core\Models\uVeiculo.pas</Transaction>
+    <Transaction>2024/06/01 23:09:42.000.886,=C:\Curso\Core\Ports\uICasoUsoCliente.pas</Transaction>
+    <Transaction>2024/06/01 23:09:42.000.998,=C:\Curso\Core\Ports\uIRepositoryCliente.pas</Transaction>
+    <Transaction>2024/06/01 23:09:42.000.918,=C:\Curso\Core\Ports\uICasoUsoLocacao.pas</Transaction>
+    <Transaction>2024/06/01 23:09:42.000.954,=C:\Curso\Core\Ports\uICasoUsoVeiculo.pas</Transaction>
+    <Transaction>2024/06/01 23:09:43.000.056,=C:\Curso\Core\Ports\uIRepositoryVeiculo.pas</Transaction>
+    <Transaction>2024/06/01 23:09:43.000.027,=C:\Curso\Core\Ports\uIRepositoryLocacao.pas</Transaction>
+    <Transaction>2024/06/01 23:09:56.000.224,=C:\Curso\Core\Response\uResponse.pas</Transaction>
+    <Transaction>2024/06/01 23:10:17.000.379,=C:\Curso\Core\Usecases\uCasoUsoLocacao.pas</Transaction>
+    <Transaction>2024/06/01 23:10:17.000.416,=C:\Curso\Core\Usecases\uCasoUsoVeiculo.pas</Transaction>
+    <Transaction>2024/06/01 23:10:17.000.335,=C:\Curso\Core\Usecases\uCasoUsoCliente.pas</Transaction>
+    <Transaction>2024/06/01 23:10:28.000.186,=C:\Curso\Controllers\uControllerVeiculo.pas</Transaction>
+    <Transaction>2024/06/01 23:10:28.000.147,=C:\Curso\Controllers\uControllerlocacao.pas</Transaction>
+    <Transaction>2024/06/01 23:10:43.000.716,=C:\Curso\Presenters\uIPresenter.pas</Transaction>
+    <Transaction>2024/06/01 23:10:43.000.793,=C:\Curso\Presenters\uPresenterStr.pas</Transaction>
+    <Transaction>2024/06/01 23:10:43.000.762,=C:\Curso\Presenters\uPresenterJson.pas</Transaction>
+    <Transaction>2024/06/01 23:11:01.000.528,=C:\Curso\Repository\uRepositoryCliente.pas</Transaction>
+    <Transaction>2024/06/01 23:11:01.000.498,=C:\Curso\Repository\uConfiguracaoDB.pas</Transaction>
+    <Transaction>2024/06/01 23:11:01.000.558,=C:\Curso\Repository\uRepositoryLocacao.pas</Transaction>
+    <Transaction>2024/06/01 23:11:01.000.612,=C:\Curso\Repository\uRepositoryVeiculo.pas</Transaction>
+    <Transaction>2024/06/01 23:11:13.000.477,=C:\Curso\Utils\uUtils.pas</Transaction>
+    <Transaction>2024/06/01 23:41:50.000.645,=C:\Curso\Applications\Api\Unit1.pas</Transaction>
+    <Transaction>2024/06/01 23:42:12.000.425,C:\Curso\Applications\Api\Unit1.pas=C:\Curso\Applications\Api\Routes\uRoute.Clientes.pas</Transaction>
+    <Transaction>2024/06/06 21:03:14.000.652,=C:\Curso\Applications\Api\Unit1.pas</Transaction>
+    <Transaction>2024/06/06 21:03:35.000.283,C:\Curso\Applications\Api\Unit1.pas=C:\Curso\Applications\Api\Controllers\uController.Veiculos.pas</Transaction>
+    <Transaction>2024/06/06 21:17:05.000.020,=C:\Curso\Applications\Api\Unit1.pas</Transaction>
+    <Transaction>2024/06/06 21:17:22.000.234,C:\Curso\Applications\Api\Unit1.pas=C:\Curso\Applications\Api\Routes\uRoute.Veiculos.pas</Transaction>
+    <Transaction>2024/06/07 21:16:08.000.136,=C:\Curso\Applications\Api\Unit1.pas</Transaction>
+    <Transaction>2024/06/07 21:16:28.000.201,C:\Curso\Applications\Api\Unit1.pas=C:\Curso\Applications\Api\Controllers\uController.Locacoes.pas</Transaction>
+    <Transaction>2024/06/07 21:23:06.000.218,C:\Curso\Applications\Api\Controllers\uController.Locacoes.pas=</Transaction>
+    <Transaction>2024/06/07 21:24:35.000.099,=C:\Curso\Applications\Api\Unit1.pas</Transaction>
+    <Transaction>2024/06/07 21:24:54.000.365,C:\Curso\Applications\Api\Unit1.pas=C:\Curso\Applications\Api\Controllers\uController.Locacoes.pas</Transaction>
+    <Transaction>2024/06/07 21:41:26.457,=C:\Curso\Applications\Api\Unit1.pas</Transaction>
+    <Transaction>2024/06/07 21:41:44.977,C:\Curso\Applications\Api\Routes\uRoute.Locacoes.pas=C:\Curso\Applications\Api\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<test-results name="C:\Curso\Applications\Teste\locacaoTeste.exe" total="15" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2024-06-03" time="0.732">
+  <culture-info current-culture="en" current-uiculture="en" />
+  <test-suite type="Assembly" name="locacaoTeste.exe" executed="true" result="Success" success="True" time="0.732" asserts="0">
+    <results>
+        <test-suite type="Namespace" name="uTesteuseCaseLocacao" executed="true" result="Success" success="True" time="0.731" asserts="0" >
+          <results>
+              <test-suite type="Fixture" name="TTesteCasoUsoLocacao" executed="True" result="Success" success="True" time="0.731" >
+                <results>
+                  <test-case name="ValidarClienteInformado" executed="True" result="Success" success="True" time="0.054" asserts="0" />
+                  <test-case name="ValidarVeiculoInformado" executed="True" result="Success" success="True" time="0.046" asserts="0" />
+                  <test-case name="ValidarVeiculoAlugado" executed="True" result="Success" success="True" time="0.047" asserts="0" />
+                  <test-case name="CadastrarLocacao" executed="True" result="Success" success="True" time="0.028" asserts="0" />
+                  <test-case name="DevolverVeiculoLocacao" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                </results>
+              </test-suite>
+          </results>
+        </test-suite>
+        <test-suite type="Namespace" name="uTesteuseCaseCliente" executed="true" result="Success" success="True" time="0.290" asserts="0" >
+          <results>
+              <test-suite type="Fixture" name="TTesteCasoUsoCliente" executed="True" result="Success" success="True" time="0.290" >
+                <results>
+                  <test-case name="CadastrarCliente" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="AlterarCliente" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="ValidarNomeCliente" executed="True" result="Success" success="True" time="0.034" asserts="0" />
+                  <test-case name="ValidarDocumentoCliente" executed="True" result="Success" success="True" time="0.052" asserts="0" />
+                  <test-case name="ConsultaCliente" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                  <test-case name="ExcluirCliente" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                </results>
+              </test-suite>
+          </results>
+        </test-suite>
+        <test-suite type="Namespace" name="uTesteuseCaseVeiculo" executed="true" result="Success" success="True" time="0.164" asserts="0" >
+          <results>
+              <test-suite type="Fixture" name="TTesteCasoUsoVeiculo" executed="True" result="Success" success="True" time="0.164" >
+                <results>
+                  <test-case name="CadastrarVeiculo" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+                  <test-case name="AlterarVeiculo" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                  <test-case name="ValidarValorVeiculo" executed="True" result="Success" success="True" time="0.058" asserts="0" />
+                  <test-case name="ValidarPlacaVeiculo" executed="True" result="Success" success="True" time="0.075" asserts="0" />
+                </results>
+              </test-suite>
+          </results>
+        </test-suite>
+    </results>
+  </test-suite>
+</test-results>

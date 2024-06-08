@@ -1,0 +1,9 @@
+unit uIRepositoryVeiculo;
+
+interface
+
+uses uVeiculos,uDtoVeiculo, system.Generics.Collections;
+
+implementation
+
+end.

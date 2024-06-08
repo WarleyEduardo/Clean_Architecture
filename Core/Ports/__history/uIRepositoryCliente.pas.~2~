@@ -1,0 +1,16 @@
+unit uIRepositoryCliente;
+
+interface
+
+uses uCliente, uDtoCliente, system.Generics.Collections;
+
+type
+
+ IRepsoitoryCliente = interface
+
+ end;
+
+
+implementation
+
+end.

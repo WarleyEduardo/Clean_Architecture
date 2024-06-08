@@ -1,0 +1,26 @@
+unit uRoute.Clientes;
+
+interface
+
+uses horse, uController.Clientes;
+
+procedure RouteCliente;
+
+implementation
+
+procedure RouteCliente;
+begin
+
+
+ // cadastrar
+
+
+ // alterar
+
+ // excluir
+
+
+ // consultar
+end;
+
+end.

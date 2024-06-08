@@ -1,0 +1,36 @@
+unit uRoute.Locacoes;
+
+interface
+
+uses horse , uController.locacoes;
+
+procedure RouteLocacao;
+begin
+end;
+
+implementation
+
+procedure RouteLocacao;
+begin
+
+
+ // cadastrar
+
+  Thorse.Post('/api/cliente',postCliente);
+
+ // alterar
+
+ Thorse.Put('/api/cliente/:id',putCliente);
+
+ // excluir
+
+ Thorse.delete('/api/cliente/:id',deleteCliente);
+
+ // consultar
+
+  Thorse.get('/api/clientes',getClientes);
+
+end;
+
+
+end.

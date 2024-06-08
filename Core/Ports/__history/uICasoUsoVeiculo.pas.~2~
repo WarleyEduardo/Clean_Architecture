@@ -1,0 +1,31 @@
+unit uICasoUsoVeiculo;
+
+interface
+
+uses uVeiculo, uDtoVeiculo, uResponse;
+
+
+
+ ICasoUsoVeiculo = interface
+
+ // cadastrar
+
+   function Cadastrar(veiculo : TVeiculo): Tresponse;
+
+ // alterar
+
+
+  function Alterar (veiculo : TVeiculo) : Tresponse;
+
+ // deletar
+
+  function Deletar (id : integer) : Tresponse;
+
+ // consultar
+
+
+ function  Consultar (Dto: DtoVeiculo) : TResponse;
+
+implementation
+
+end.

@@ -1,0 +1,100 @@
+unit uExceptions;
+
+interface
+
+uses System.SysUtils;
+
+type
+
+TExceptionNome              = class(Exception);
+TexceptionMinimoNome        = class (Exception);
+TexceptionDocumento         = class(Exception);
+TexceptionMinimoDocumento   = class(Exception);
+TExceptionTelefone          = class(Exception);
+TExceptionMinimoTelefone    = class(Exception);
+
+
+TexceptionMinimoNomeVeiculo   = class(Exception);
+TexceptionPlacaVeiculo        = class(Exception);
+TexceptionMinimoPlacaVeiculo  = class(Exception);
+TexceptionValorVeiculo        = class(Exception);
+
+
+// Exceptions Cliente
+procedure ExceptionNome;
+procedure ExceptionMinimoNome;
+
+procedure ExceptionDocumento;
+procedure ExceptionMinimoDocumento;
+
+procedure ExceptionTelefone;
+procedure ExceptionMinimoTelefone;
+
+
+// Exceptions Veículo
+
+procedure ExceptionMinimoNomeVeiculo;
+
+procedure ExceptionPlacaVeiculo;
+
+procedure ExceptionMinimoPlacaVeiculo;
+
+procedure ExceptionValorVeiculo;
+
+
+implementation
+
+procedure ExceptionMinimoNomeVeiculo;
+begin
+  raise TExceptionMinimoNomeVeiculo.Create('Nome deve conter no mínimo 3 caracteres ');
+end;
+
+procedure ExceptionPlacaVeiculo;
+begin
+
+end;
+
+procedure ExceptionMinimoPlacaVeiculo;
+begin
+
+end;
+
+procedure ExceptionValorVeiculo;
+begin
+
+end;
+
+
+procedure ExceptionTelefone;
+begin
+
+  raise TExceptionTelefone.Create('Telefone deve ser informado');
+end;
+
+procedure ExceptionMinimoTelefone;
+begin
+ raise TExceptionMinimoTelefone.Create('Telefone deve conter no mínimo 8 caracteres');
+end;
+
+procedure ExceptionMinimoDocumento;
+begin
+  raise TExceptionMinimoDocumento.Create('Documento deve conter no minímo 4 caracteres');
+end;
+
+procedure ExceptionDocumento;
+begin
+  raise TexceptionDocumento.Create('Documento deve ser informado');
+end;
+
+procedure ExceptionMinimoNome;
+begin
+  raise TexceptionMinimoNome.Create('Nome deve conter no minímo 4 caracteres');
+end;
+
+
+procedure ExceptionNome;
+begin
+  raise TExceptionNome.Create('Nome deve ser informado');
+end;
+
+end.

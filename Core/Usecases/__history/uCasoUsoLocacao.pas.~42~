@@ -1,0 +1,223 @@
+unit uCasoUsoLocacao;
+
+interface
+
+uses uLocacao, uDtoLocacao, uResponse, uutils ,system.SysUtils,
+uIcasoUsoLocacao, uEnums, uExceptions,system.Generics.Collections,
+uIrepositoryLocacao;
+
+type
+ TCasoUsoLocacao = class(TinterfacedObject, IcasoUsoLocacao)
+  private
+    FRepository : IrepositoryLocacao;
+    FLista: Tlist<TLocacao>;
+    FListaObject: TObjectlist<TObject>;
+    procedure SetLista(const Value: Tlist<TLocacao>);
+    procedure SetListaObject(const Value: TObjectlist<TObject>);
+  published
+
+  function Cadastrar(locacao: Tlocacao)  : Tresponse;
+  function Alterar(locacao: Tlocacao)    : Tresponse;
+  function Deletar(id : integer)         : Tresponse;
+  function Consultar(Dto : DtoLocacao)   : Tresponse;
+
+  procedure ValidarId(id : integer);
+
+  property Lista : Tlist<TLocacao> read FLista write SetLista;
+  property ListaObject :  TObjectlist<TObject> read FListaObject write SetListaObject;
+
+  constructor create(repository : IRepositoryLocacao);
+
+  destructor destroy;override;
+
+
+ end;
+
+
+
+implementation
+
+{ TCasoUsoLocacao }
+
+function TCasoUsoLocacao.Alterar(locacao: Tlocacao): Tresponse;
+var
+ response : Tresponse;
+begin
+ // alterar
+
+  try
+
+     Locacao.validarRegrasNegocios;
+
+
+
+     Frepository.Alterar(locacao);
+
+     Response.success   := true;
+     Response.ErrorCode := 0;
+     Response.Message   := RetornarMsgResponse.ALTERADO_COM_SUCESSO;
+     response.Data      := nil;
+
+
+  except
+
+    on e : exception do
+    begin
+        Response := TratarException(e);
+    end;
+
+  end;
+
+  result := Response;
+
+
+end;
+
+function TCasoUsoLocacao.Cadastrar(locacao: Tlocacao): Tresponse;
+var
+ response : Tresponse;
+begin
+
+// Cadastrar
+
+ try
+
+    Locacao.validarRegrasNegocios;
+
+    locacao.DataLocacao := now;
+    FRepository.cadastrar(locacao);
+
+    Response.success   := true;
+    Response.ErrorCode := 0;
+    Response.Message   := RetornarMsgResponse.CADASTRADO_COM_SUCESSO;
+    response.Data      := nil;
+
+
+  except
+
+   on e : exception do
+   begin
+      Response := TratarException(e);
+   end;
+
+ end;
+
+  result := Response
+
+end;
+
+function TCasoUsoLocacao.Consultar(Dto: DtoLocacao): Tresponse;
+var
+ response : Tresponse;
+begin
+
+  // Consultar
+
+   try
+
+
+     ListaObject.Clear;
+     lista := Frepository.Consultar(dto);
+
+     if Lista.Count > 0  then
+     begin
+
+       Response.success   := true;
+       Response.ErrorCode := 0;
+       Response.Message   := RetornarMsgResponse.CONSULTA_REALIZADA_COM_SUCESSO;
+       response.Data      := ListaLocacaoParaListaObject(ListaObject,lista);
+
+     end else
+     begin
+
+       Response.success   := true;
+       Response.ErrorCode := 0;
+       Response.Message   := RetornarMsgResponse.CONSULTA_REALIZADA_SEM_RETORNO;
+       response.Data      := nil;
+
+     end;
+
+
+
+  except
+
+    on e : exception do
+    begin
+      Response := TratarException(e);
+    end;
+
+  end;
+
+  result := Response
+
+end;
+
+constructor TCasoUsoLocacao.create(repository: IRepositoryLocacao);
+begin
+
+ Frepository := repository;
+ //Lista       := Tlist<TLocacao>.Create;
+ ListaObject := TObjectList<TObject>.Create;
+end;
+
+function TCasoUsoLocacao.Deletar(id: integer): Tresponse;
+var
+ response : TResponse;
+begin
+
+  // Deletar
+
+   try
+
+     ValidarId(id);
+
+     fRepository.Excluir(id);
+
+     Response.success   := true;
+     Response.ErrorCode := 0;
+     Response.Message   := RetornarMsgResponse.DELETADO_COM_SUCESSO;
+     response.Data      := nil;
+
+
+  except
+
+    on e : exception do
+    begin
+      Response := TratarException(e);
+    end;
+
+  end;
+
+  result := Response
+
+end;
+
+destructor TCasoUsoLocacao.destroy;
+begin
+
+  //Lista.Free ;
+  //ListaObject.Free;
+
+  inherited;
+end;
+
+procedure TCasoUsoLocacao.SetLista(const Value: Tlist<TLocacao>);
+begin
+  FLista := Value;
+end;
+
+procedure TCasoUsoLocacao.SetListaObject(const Value: TObjectlist<TObject>);
+begin
+  FListaObject := Value;
+end;
+
+procedure TCasoUsoLocacao.ValidarId(id: integer);
+begin
+
+  if id < 0 then
+   begin
+     ExceptionIdInvalido;
+   end;
+end;
+
+end.

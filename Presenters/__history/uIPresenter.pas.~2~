@@ -1,0 +1,19 @@
+unit uIPresenter;
+
+interface
+
+
+uses  uresponse , ucliente , system.Generics.Collections;
+
+type
+
+ Ipresenter = interface
+
+  function ConverterResponse(response: Tresponse) : string;
+ end;
+
+
+
+implementation
+
+end.

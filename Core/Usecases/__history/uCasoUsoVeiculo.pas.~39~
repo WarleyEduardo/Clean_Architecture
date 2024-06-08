@@ -1,0 +1,233 @@
+unit uCasoUsoVeiculo;
+
+interface
+
+uses uVeiculo, uDtoVeiculo, uResponse, uICasoUsoVeiculo, uEnums,
+   uUtils, system.SysUtils, uExceptions, system.Generics.Collections,
+   uIRepositoryVeiculo;
+
+type
+
+ TcasoUsoVeiculo = class(TinterfacedObject, IcasoUsoVeiculo)
+  private
+    FRepository : IRepositoryVeiculo;
+    FListaObject: TObjectlist<TObject>;
+    FLista: TObjectlist<TVeiculo>;
+    procedure SetListaObject(const Value: TObjectlist<TObject>);
+    procedure SetLista(const Value: TObjectlist<TVeiculo>);
+
+  published
+
+  // cadastrar
+
+   function Cadastrar(veiculo : Tveiculo): Tresponse;
+
+ // alterar
+
+
+  function Alterar (veiculo : Tveiculo) : Tresponse;
+
+ // deletar
+
+  function Deletar (id : integer) : Tresponse;
+
+ // consultar
+
+ function  Consultar (Dto: Dtoveiculo) : TResponse;
+
+  procedure ValidarId(id : integer) ;
+
+  property ListaObject :  TObjectlist<TObject> read FListaObject write SetListaObject;
+  property Lista : TObjectlist<TVeiculo> read FLista write SetLista;
+
+  constructor create(repository : IRepositoryVeiculo);
+
+  destructor destroy;override;
+
+
+ end;
+
+implementation
+
+{ TcasoUsoVeiculo }
+
+function TcasoUsoVeiculo.Alterar(veiculo: Tveiculo): Tresponse;
+var
+ response : Tresponse;
+begin
+ // alterar
+
+  try
+
+     Veiculo.validarRegrasNegocios;
+
+     Frepository.Alterar(veiculo);
+
+     Response.success   := true;
+     Response.ErrorCode := 0;
+     Response.Message   := RetornarMsgResponse.ALTERADO_COM_SUCESSO;
+     response.Data      := nil;
+
+
+  except
+
+    on e : exception do
+    begin
+        Response := TratarException(e);
+    end;
+
+  end;
+
+  result := Response;
+
+
+end;
+
+function TcasoUsoVeiculo.Cadastrar(veiculo: Tveiculo): Tresponse;
+var
+ response : Tresponse;
+begin
+
+// Cadastrar
+
+ try
+
+    Veiculo.validarRegrasNegocios;
+
+    Frepository.Cadastrar(veiculo);
+
+    Response.success   := true;
+    Response.ErrorCode := 0;
+    Response.Message   := RetornarMsgResponse.CADASTRADO_COM_SUCESSO;
+    response.Data      := nil;
+
+
+  except
+
+   on e : exception do
+   begin
+      Response := TratarException(e);
+   end;
+
+ end;
+
+  result := Response
+
+
+end;
+
+function TcasoUsoVeiculo.Consultar(Dto: Dtoveiculo): TResponse;
+var
+ response : Tresponse;
+begin
+
+  // Consultar
+
+   try
+
+
+    ListaObject.Clear;
+     lista := Frepository.Consultar(dto);
+
+     if Lista.Count > 0  then
+     begin
+
+       Response.success   := true;
+       Response.ErrorCode := 0;
+       Response.Message   := RetornarMsgResponse.CONSULTA_REALIZADA_COM_SUCESSO;
+       response.Data      := ListaClienteParaListaObject(ListaObject,lista);
+
+     end else
+     begin
+
+       Response.success   := true;
+       Response.ErrorCode := 0;
+       Response.Message   := RetornarMsgResponse.CONSULTA_REALIZADA_COM_SUCESSO;
+       response.Data      := nil;
+
+     end;
+
+
+  except
+
+    on e : exception do
+    begin
+      Response := TratarException(e);
+    end;
+
+  end;
+
+  result := Response
+
+end;
+
+constructor TcasoUsoVeiculo.create(repository: IRepositoryVeiculo);
+begin
+ Frepository := repository;
+ Lista       := TObjectList<TVeiculo>.Create;
+ ListaObject := TObjectList<TObject>.Create;
+end;
+
+function TcasoUsoVeiculo.Deletar(id: integer): Tresponse;
+var
+ response : Tresponse;
+begin
+
+ try
+
+    ValidarId(id);
+
+    Frepository.Excluir(id);
+
+    Response.success   := true;
+    Response.ErrorCode := 0;
+    Response.Message   := RetornarMsgResponse.DELETADO_COM_SUCESSO;
+    response.Data      := nil;
+
+
+  except
+
+   on e : exception do
+   begin
+      Response := TratarException(e);
+   end;
+
+ end;
+
+  result := Response
+
+end;
+
+
+
+destructor TcasoUsoVeiculo.destroy;
+begin
+
+  Lista.Free;
+  FListaObject.Free;
+
+
+  inherited;
+end;
+
+procedure TcasoUsoVeiculo.SetLista(const Value: TObjectlist<TVeiculo>);
+begin
+  FLista := Value;
+end;
+
+procedure TcasoUsoVeiculo.SetListaObject(const Value: TObjectlist<TObject>);
+begin
+  FListaObject := Value;
+end;
+
+procedure TcasoUsoVeiculo.ValidarId(id: integer);
+begin
+
+   if id < 0 then
+   begin
+     ExceptionIdInvalido;
+   end;
+
+end;
+
+end.

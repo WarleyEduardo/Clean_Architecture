@@ -1,0 +1,20 @@
+unit uVeiculo;
+
+interface
+
+type
+
+ TVeiculo = class
+
+   property Id : integer;
+   property Nome : string;
+   property Placa : string;
+   property Valor : currency;
+   property Status :
+
+ end;
+
+
+implementation
+
+end.

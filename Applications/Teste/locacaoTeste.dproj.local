@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/11/06 21:45:04.000.647,=C:\Users\notep\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/04/15 21:49:06.000.237,=C:\Users\notep\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/04/15 21:49:23.000.581,C:\Users\notep\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\notep\Documents\Embarcadero\Studio\Projects\locacaoTeste.dproj</Transaction>
+    <Transaction>2024/04/15 21:50:09.000.921,C:\Users\notep\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Curso\Applications\Teste\uTesteuseCaseCliente.pas</Transaction>
+    <Transaction>2024/04/15 21:50:15.000.026,C:\Users\notep\Documents\Embarcadero\Studio\Projects\locacaoTeste.dproj=C:\Curso\Applications\Teste\locacaoTeste.dproj</Transaction>
+    <Transaction>2024/04/15 21:56:08.000.726,=C:\Curso\Core\DTO\uDTOCliente.pas</Transaction>
+    <Transaction>2024/04/15 21:56:27.000.996,=C:\Curso\Core\Enums\uEnums.pas</Transaction>
+    <Transaction>2024/04/15 21:56:43.000.890,=C:\Curso\Core\Exceptions\uExceptions.pas</Transaction>
+    <Transaction>2024/04/15 21:57:01.000.609,=C:\Curso\Core\Models\uCliente.pas</Transaction>
+    <Transaction>2024/04/15 21:57:15.000.894,=C:\Curso\Core\Ports\uICasoUsoCliente.pas</Transaction>
+    <Transaction>2024/04/15 21:57:32.000.435,=C:\Curso\Core\Response\uResponse.pas</Transaction>
+    <Transaction>2024/04/15 21:57:46.000.924,=C:\Curso\Core\Usecases\uCasoUsoCliente.pas</Transaction>
+    <Transaction>2024/04/15 21:57:59.000.315,=C:\Curso\Utils\uUtils.pas</Transaction>
+    <Transaction>2024/04/20 21:26:14.000.864,=C:\Curso\Core\DTO\uDTOVeiculo.pas</Transaction>
+    <Transaction>2024/04/20 21:26:33.000.750,=C:\Curso\Core\Models\uVeiculo.pas</Transaction>
+    <Transaction>2024/04/20 21:27:23.000.439,=C:\Curso\Core\Ports\uICasoUsoVeiculo.pas</Transaction>
+    <Transaction>2024/04/20 21:27:46.000.634,=C:\Curso\Core\Usecases\uCasoUsoVeiculo.pas</Transaction>
+    <Transaction>2024/04/20 21:29:15.000.979,=C:\Curso\Applications\Teste\Unit1.pas</Transaction>
+    <Transaction>2024/04/20 21:29:47.000.026,C:\Curso\Applications\Teste\u.pas=C:\Curso\Applications\Teste\Unit1.pas</Transaction>
+    <Transaction>2024/04/20 21:30:15.000.323,C:\Curso\Applications\Teste\uTesteuseCaseVeiculo.pas=C:\Curso\Applications\Teste\u.pas</Transaction>
+    <Transaction>2024/04/21 21:07:42.000.415,=C:\Curso\Core\DTO\uDTOLocacao.pas</Transaction>
+    <Transaction>2024/04/21 21:08:02.000.613,=C:\Curso\Core\Models\uLocacao.pas</Transaction>
+    <Transaction>2024/04/21 21:08:18.000.530,=C:\Curso\Core\Ports\uICasoUsoLocacao.pas</Transaction>
+    <Transaction>2024/04/21 21:08:34.000.824,=C:\Curso\Core\Usecases\uCasoUsoLocacao.pas</Transaction>
+    <Transaction>2024/04/21 21:09:06.000.648,=C:\Curso\Applications\Teste\Unit1.pas</Transaction>
+    <Transaction>2024/04/21 21:09:45.000.996,C:\Curso\Applications\Teste\Unit1.pas=C:\Curso\Applications\Teste\uTesteuseCaseLocacao.pas</Transaction>
+    <Transaction>2024/04/21 21:11:47.000.279,C:\Curso\Applications\Teste\uTesteuseCaseLocacao.pas=</Transaction>
+    <Transaction>2024/04/22 21:52:42.000.016,=C:\Curso\Applications\Teste\Unit1.pas</Transaction>
+    <Transaction>2024/04/22 21:53:07.000.884,C:\Curso\Applications\Teste\Unit1.pas=C:\Curso\Applications\Teste\uTesteuseCaseLocacao.pas</Transaction>
+    <Transaction>2024/04/29 21:27:52.000.705,=C:\Curso\Core\Ports\uIRepositoryCliente.pas</Transaction>
+    <Transaction>2024/04/29 21:28:10.000.851,=C:\Curso\Repository\uConfiguracaoDB.pas</Transaction>
+    <Transaction>2024/04/29 21:28:21.000.640,=C:\Curso\Repository\uRepositoryCliente.pas</Transaction>
+    <Transaction>2024/04/29 21:48:34.000.268,=C:\Curso\Applications\Teste\Unit1.pas</Transaction>
+    <Transaction>2024/04/29 21:51:19.000.784,=C:\Curso\Applications\Teste\Unit1.pas</Transaction>
+    <Transaction>2024/04/29 21:54:57.000.436,=C:\Curso\Applications\Teste\Unit1.pas</Transaction>
+    <Transaction>2024/04/29 21:55:40.000.212,=C:\Curso\Applications\Teste\Unit1.pas</Transaction>
+    <Transaction>2024/05/01 20:26:09.000.622,=C:\Curso\Applications\Teste\Unit1.pas</Transaction>
+    <Transaction>2024/05/01 20:26:33.000.212,C:\Curso\Core\Ports\uIRepositoryVeiculo.pas=C:\Curso\Applications\Teste\Unit1.pas</Transaction>
+    <Transaction>2024/05/03 22:43:41.000.864,=C:\Curso\Repository\uRepositoryVeiculo.pas</Transaction>
+    <Transaction>2024/05/08 22:20:32.000.530,=C:\Curso\Core\Ports\uIRepositoryLocacao.pas</Transaction>
+    <Transaction>2024/05/08 22:20:43.000.712,=C:\Curso\Repository\uRepositoryLocacaopas.pas</Transaction>
+    <Transaction>2024/05/08 22:22:10.000.054,C:\Curso\Repository\uRepositoryLocacao.pas=C:\Curso\Repository\uRepositoryLocacaopas.pas</Transaction>
+  </Transactions>
+</BorlandProject>
