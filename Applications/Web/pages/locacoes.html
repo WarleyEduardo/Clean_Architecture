@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locações</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="flex horizontal">
+
+        <div class="flex-1">
+
+        </div>
+        
+       
+        <div class="flex-2">
+            <h1>Locações</h1>
+        </div>
+
+      
+
+        <div class="flex fechar-menu flex-1">
+
+            <span  id="fecharMenuBtn"  data-page="index.html">X</span>
+
+        </div>
+        
+    </header>
+    <main class="container">
+        <section class="search-section flex horizontal">
+
+            <div class="flex horizontal flex-2">
+
+                <div class="form-group">
+                    <label for="codigo">Código</label>
+                    <input type="text" id="codigo" name="codigo">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cliente">Cliente</label>
+                    <input type="text" id="cliente" name="cliente">
+                </div>
+                
+                <div class="form-group">
+                    <label for="locacao">Locação</label>
+                    <input type="text" id="locacao" name="locacao">
+                </div>
+                
+                <div class="form-group">
+                    <label for="devolucao">Devolução</label>
+                    <input type="text" id="devolucao" name="devolucao">
+                </div>
+
+            </div>
+            
+      
+
+            <div class="flex">
+
+                <button id="consultar">Consultar</button>
+
+            </div>
+            
+            
+        
+        </section>
+        <section class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Id Cliente</th>
+                        <th>Nome Cliente</th>
+                        <th>Id Veiculo</th>
+                        <th>Nome Veiculo</th>
+                        <th>Data Locacao</th>
+                        <th>Data Devolucao</th>  
+                        <th>Total</th>                   
+                    </tr>
+                </thead>
+                <tbody id="tabela-locacoes">
+                </tbody>
+            </table>
+        </section>
+        <section class="actions-section">
+            <button id="incluir">Incluir</button>
+            <button id="editar">Editar</button>
+            <button id="excluir">Excluir</button>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            
+            <div class="modal-close">
+                <span class="close">&times;</span>
+            </div>
+
+            <div class="modal-titulo">
+
+                <h2>Locações</h2>
+
+            </div>
+
+           
+           
+           
+            <form id="Form">
+
+                <section class="flex horizontal">
+                   
+                    <div class="flex flex-2">
+                        
+                        <div class="form-group">
+                            <label for="modalCliente">Cliente</label>
+                            <input   disabled="true" type="text" id="modalCliente" name="modalCliente">
+                        </div>
+
+                        <div class="form-group flex-2">
+                            <label for="modalNomeCliente">Nome Cliente</label>
+                            <select id="modalNomeCliente"  name="modalNomeCliente">
+                                <option value=0>Informe o cliente</option>                              
+                            </select>
+                        </div>
+
+                        <!--
+                        
+                        <div class="form-group flex-2">
+                            <label for="modalNomeCliente">Nome Cliente</label>
+                            <input  disabled="true" type="text" id="modalNomeCliente" name="modalNomeCliente">
+                        </div>
+                    -->
+
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="modalCodigo">Código</label>
+                        <input  disabled="true" type="text" id="modalCodigo" name="modalCodigo">
+                    </div>
+         
+
+
+                </section>
+
+                <section class="flex horizontal">
+
+                    <div class="form-group">
+                        <label for="modalVeiculo">Veículo</label>
+                        <input   disabled="true"  type="text" id="modalVeiculo" name="modalVeiculo">
+                    </div>
+
+                    <div class="form-group flex-2">
+                        <label for="modalNomeVeiculo">Nome Veículo</label>
+                        <select id="modalNomeVeiculo"  name="modalNomeVeiculo">
+                            <option value=0>Informe o veículo</option>                              
+                        </select>
+                    </div>
+
+
+                    <!--
+                    <div class="form-group flex-2">
+                        <label for="modalNomeVeiculo">Nome Veículo</label>
+                        <input  disabled="true" type="text" id="modalNomeVeiculo" name="modalNomeVeiculo">
+                    </div>
+                    -->
+
+                
+
+
+                </section>
+
+
+                <section>
+
+                    <div class="form-group">
+                        <label for="modalLocacao">Locação</label>
+                        <input disabled="true" type="text" id="modalLocacao" name="modalLocacao">
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="modalDevolucao">Devolucão</label>
+                        <input type="texte" id="modalDevolucao" name="modalDevolucao">
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="modalTotal">Total</label>
+                        <input type="text" id="modalTotal" name="modalTotal">
+                    </div>
+
+                </section>
+                
+                <section class="modalButton">
+
+                    <button type="button" id="salvar" >Salvar</button>
+                    <button type="button" id="voltar">Voltar</button>
+
+                </section>
+                
+                    
+              
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/retornarApi.js"></script>
+    <script src="../js/locacoes.js"></script>
+</body>
+</html>
